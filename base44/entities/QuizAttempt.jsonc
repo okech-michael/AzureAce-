@@ -1,0 +1,72 @@
+{
+  "name": "QuizAttempt",
+  "description": "A learner's practice attempt.",
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "description": "mixed | topic | weak-areas | assessment"
+    },
+    "topic_filter": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "difficulty": {
+      "type": "string"
+    },
+    "question_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "total_questions": {
+      "type": "number"
+    },
+    "answered_count": {
+      "type": "number"
+    },
+    "correct_count": {
+      "type": "number"
+    },
+    "score_percent": {
+      "type": "number"
+    },
+    "timed": {
+      "type": "boolean"
+    },
+    "time_limit_seconds": {
+      "type": "number"
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "completed_at": {
+      "type": "string"
+    },
+    "duration_seconds": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "description": "in_progress | completed"
+    }
+  },
+  "required": [
+    "question_ids",
+    "status"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

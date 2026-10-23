@@ -1,0 +1,45 @@
+{
+  "name": "AnswerKey",
+  "description": "Server-only answer keys and explanations. Never readable from the browser.",
+  "type": "object",
+  "properties": {
+    "question_id": {
+      "type": "string"
+    },
+    "correct_options": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "distractors": {
+      "type": "string",
+      "description": "Why the plausible wrong options are wrong"
+    }
+  },
+  "required": [
+    "question_id",
+    "correct_options"
+  ],
+  "rls": {
+    "read": false,
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "RevisionItem",
+  "description": "A concept the learner got wrong and should revisit.",
+  "type": "object",
+  "properties": {
+    "question_id": {
+      "type": "string"
+    },
+    "topic_id": {
+      "type": "string"
+    },
+    "topic_slug": {
+      "type": "string"
+    },
+    "topic_title": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "question_text": {
+      "type": "string"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "correct_options": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "miss_count": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "description": "open | resolved"
+    },
+    "last_missed_at": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "question_id"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

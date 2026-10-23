@@ -1,0 +1,57 @@
+{
+  "name": "Flashcard",
+  "description": "A study card belonging to an AZ-900 topic.",
+  "type": "object",
+  "properties": {
+    "topic_id": {
+      "type": "string"
+    },
+    "topic_slug": {
+      "type": "string"
+    },
+    "front": {
+      "type": "string"
+    },
+    "back": {
+      "type": "string"
+    },
+    "example": {
+      "type": "string"
+    },
+    "hint": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "description": "easy | medium | hard"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "order": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "front",
+    "back"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

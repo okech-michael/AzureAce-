@@ -1,0 +1,47 @@
+{
+  "name": "LearnerProfile",
+  "description": "Onboarding answers and study preferences for one learner.",
+  "type": "object",
+  "properties": {
+    "display_name": {
+      "type": "string"
+    },
+    "exam_date": {
+      "type": "string"
+    },
+    "minutes_per_day": {
+      "type": "number"
+    },
+    "session_length": {
+      "type": "number"
+    },
+    "level": {
+      "type": "string",
+      "description": "new | some-exposure | retaking"
+    },
+    "weak_topic_slugs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preferred_language": {
+      "type": "string"
+    },
+    "onboarding_completed": {
+      "type": "boolean"
+    }
+  },
+  "required": [],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

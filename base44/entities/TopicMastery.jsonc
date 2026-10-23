@@ -1,0 +1,48 @@
+{
+  "name": "TopicMastery",
+  "description": "Rolling per-topic performance for one learner.",
+  "type": "object",
+  "properties": {
+    "topic_id": {
+      "type": "string"
+    },
+    "topic_slug": {
+      "type": "string"
+    },
+    "topic_title": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "questions_attempted": {
+      "type": "number"
+    },
+    "questions_correct": {
+      "type": "number"
+    },
+    "accuracy": {
+      "type": "number"
+    },
+    "cards_reviewed": {
+      "type": "number"
+    },
+    "last_practised_at": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "topic_id"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

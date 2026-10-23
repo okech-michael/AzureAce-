@@ -1,0 +1,68 @@
+{
+  "name": "Question",
+  "description": "Practice question. Correct answers live in AnswerKey and are never sent to the browser before grading.",
+  "type": "object",
+  "properties": {
+    "topic_id": {
+      "type": "string"
+    },
+    "topic_slug": {
+      "type": "string"
+    },
+    "topic_title": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "description": "single | multiple"
+    },
+    "text": {
+      "type": "string"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "difficulty": {
+      "type": "string",
+      "description": "easy | medium | hard"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "order": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "text",
+    "options",
+    "topic_id"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

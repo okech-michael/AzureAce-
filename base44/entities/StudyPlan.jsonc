@@ -1,0 +1,46 @@
+{
+  "name": "StudyPlan",
+  "description": "A generated study plan for one learner.",
+  "type": "object",
+  "properties": {
+    "exam_date": {
+      "type": "string"
+    },
+    "minutes_per_day": {
+      "type": "number"
+    },
+    "session_length": {
+      "type": "number"
+    },
+    "level": {
+      "type": "string"
+    },
+    "focus_topic_slugs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean"
+    }
+  },
+  "required": [],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

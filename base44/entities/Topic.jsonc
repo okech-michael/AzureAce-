@@ -1,0 +1,80 @@
+{
+  "name": "Topic",
+  "description": "An AZ-900 exam topic with objectives and key concepts.",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string",
+      "description": "Stable identifier used for links"
+    },
+    "title": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "description": "cloud-concepts | architecture-services | management-governance"
+    },
+    "domain_label": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "string"
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "key_concepts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "duration_min": {
+      "type": "number"
+    },
+    "order": {
+      "type": "number"
+    },
+    "exam_weight": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "slug",
+    "title",
+    "domain"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

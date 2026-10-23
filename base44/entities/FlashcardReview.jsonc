@@ -1,0 +1,64 @@
+{
+  "name": "FlashcardReview",
+  "description": "Per-card spaced repetition state for one learner.",
+  "type": "object",
+  "properties": {
+    "flashcard_id": {
+      "type": "string"
+    },
+    "topic_id": {
+      "type": "string"
+    },
+    "topic_slug": {
+      "type": "string"
+    },
+    "front": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "string",
+      "description": "again | hard | good | easy"
+    },
+    "repetitions": {
+      "type": "number"
+    },
+    "interval_days": {
+      "type": "number"
+    },
+    "ease": {
+      "type": "number"
+    },
+    "due_date": {
+      "type": "string"
+    },
+    "last_reviewed_at": {
+      "type": "string"
+    },
+    "times_seen": {
+      "type": "number"
+    },
+    "lapses": {
+      "type": "number"
+    },
+    "is_bookmarked": {
+      "type": "boolean"
+    },
+    "is_difficult": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "flashcard_id"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}
